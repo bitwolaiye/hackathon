@@ -10,8 +10,8 @@ import RealmSwift
 
 class BuyHistory: Object {
     dynamic var id:Int = 0
-    //    var buyTime:date = nil
-    dynamic var buyPrice:Int = 0
+    dynamic var buyTime = NSDate(timeIntervalSince1970: 1)
+    dynamic var buyPrice:String = ""
     
     override static func primaryKey() -> String? {
         return "id"

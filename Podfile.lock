@@ -3,6 +3,7 @@ PODS:
   - QRCodeReaderViewController (4.0.1)
   - RAMAnimatedTabBarController (1.0.1)
   - SnapKit (0.15.0)
+  - SwiftDate (2.0.2)
   - SwiftyJSON (2.3.2)
   - Toast-Swift (1.0.0)
 
@@ -11,6 +12,7 @@ DEPENDENCIES:
   - QRCodeReaderViewController (~> 4.0.1)
   - RAMAnimatedTabBarController
   - SnapKit (~> 0.15.0)
+  - SwiftDate (~> 2.0)
   - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
   - Toast-Swift (~> 1.0.0)
 
@@ -28,6 +30,7 @@ SPEC CHECKSUMS:
   QRCodeReaderViewController: 6538745c8f4ffa9407a26bd7f9489ea01739e7b0
   RAMAnimatedTabBarController: 58b220dff7ad27efff90663a8656f3a73f8e76b6
   SnapKit: 4962eed2ee18e48cbd2b2292fffc57efe7235f87
+  SwiftDate: b4f4d0962afe48365ad2800c9850a6626deb9359
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
   Toast-Swift: 709908e9f9a96dfd72438f9301ae28e3e98c16bb
 
