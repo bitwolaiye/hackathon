@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 
 
-class ItemDetailWebViewController: UITableViewController {
+class ItemDetailWebViewController: UIViewController {
     @IBOutlet weak var webView: UIWebView!
     var request:NSURLRequest!
     

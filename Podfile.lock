@@ -4,6 +4,7 @@ PODS:
   - RAMAnimatedTabBarController (1.0.1)
   - SnapKit (0.15.0)
   - SwiftyJSON (2.3.2)
+  - Toast-Swift (1.0.0)
 
 DEPENDENCIES:
   - Alamofire (~> 3.0)
@@ -11,6 +12,7 @@ DEPENDENCIES:
   - RAMAnimatedTabBarController
   - SnapKit (~> 0.15.0)
   - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
+  - Toast-Swift (~> 1.0.0)
 
 EXTERNAL SOURCES:
   SwiftyJSON:
@@ -27,5 +29,6 @@ SPEC CHECKSUMS:
   RAMAnimatedTabBarController: 58b220dff7ad27efff90663a8656f3a73f8e76b6
   SnapKit: 4962eed2ee18e48cbd2b2292fffc57efe7235f87
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+  Toast-Swift: 709908e9f9a96dfd72438f9301ae28e3e98c16bb
 
 COCOAPODS: 0.39.0

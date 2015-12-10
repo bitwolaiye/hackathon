@@ -11,6 +11,7 @@ import UIKit
 import AVKit
 import QRCodeReaderViewController
 import QRCodeReaderViewController.QRCodeReader
+import RealmSwift
 
 class ItemListController: UITableViewController, QRCodeReaderDelegate {
     var items:[Item]!
@@ -27,28 +28,37 @@ class ItemListController: UITableViewController, QRCodeReaderDelegate {
     }
     
     override func viewWillAppear(animated: Bool) {
-        if items == nil {
-            self.reloadDataFromApi()
-            self.reloadDataFromCache()
-        }
+//        if items == nil {
+//            self.reloadDataFromApi()
+//            self.reloadDataFromCache()
+//        }
+        self.reloadDataFromRealm()
         self.navigationController?.navigationBarHidden = false;
     }
     
+    func reloadDataFromRealm() {
+        let realm = try! Realm()
+        self.items = realm.objects(Item).map { $0 }
+        self.tableView.reloadData()
+    }
+    
     func reloadDataFromApi() {
-        let selfController:ItemListController = self
-        ItemApi.sharedInstance.getList { (item: [Item]) -> Void in
-            selfController.items = item
-            self.tableView.reloadData()
-        }
+//        let selfController:ItemListController = self
+//        ItemApi.sharedInstance.getList { (item: [Item]) -> Void in
+//            selfController.items = item
+//            self.tableView.reloadData()
+//        }
     }
     
     func reloadDataFromCache() {
         var items:[Item]! = []
-        items.append(Item(itemUrl: "", itemId: 1, itemName: "牙刷", itemDesc: "", itemPrice: "5.00", buyHistories: []))
-        items.append(Item(itemUrl: "", itemId: 2, itemName: "牙膏", itemDesc: "", itemPrice: "12.00", buyHistories: []))
-        items.append(Item(itemUrl: "", itemId: 3, itemName: "洗发水", itemDesc: "", itemPrice: "20.00", buyHistories: []))
-        items.append(Item(itemUrl: "", itemId: 4, itemName: "护发素", itemDesc: "", itemPrice: "30.00", buyHistories: []))
-        items.append(Item(itemUrl: "", itemId: 5, itemName: "面霜", itemDesc: "", itemPrice: "40.00", buyHistories: []))
+        let realm = try! Realm()
+        items = realm.objects(Item).map { $0 }
+//        items.append(Item(itemUrl: "", itemId: 1, itemName: "牙刷", itemDesc: "", itemPrice: "5.00", buyHistories: []))
+//        items.append(Item(itemUrl: "", itemId: 2, itemName: "牙膏", itemDesc: "", itemPrice: "12.00", buyHistories: []))
+//        items.append(Item(itemUrl: "", itemId: 3, itemName: "洗发水", itemDesc: "", itemPrice: "20.00", buyHistories: []))
+//        items.append(Item(itemUrl: "", itemId: 4, itemName: "护发素", itemDesc: "", itemPrice: "30.00", buyHistories: []))
+//        items.append(Item(itemUrl: "", itemId: 5, itemName: "面霜", itemDesc: "", itemPrice: "40.00", buyHistories: []))
         self.items = items
     }
     
@@ -62,7 +72,7 @@ class ItemListController: UITableViewController, QRCodeReaderDelegate {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = ItemCell(style: UITableViewCellStyle.Default, reuseIdentifier: "ItemCell")
-        cell.setItem(items[indexPath.row])
+        cell.setItem1(items[indexPath.row])
         return cell
     }
     
@@ -76,25 +86,45 @@ class ItemListController: UITableViewController, QRCodeReaderDelegate {
     
     func reader(reader: QRCodeReaderViewController!, didScanResult result: String!) {
         self.dismissViewControllerAnimated(true) { () -> Void in
+            if result.hasPrefix("https://zhouqi.work/") {
+                self.scanResult = result
+                self.performSegueWithIdentifier("ShowItemDetail", sender: nil)
+            }
             NSLog("%@", result)
-            self.scanResult = result
-            self.performSegueWithIdentifier("showWeb", sender: self)
         }
     }
     
     func readerDidCancel(reader: QRCodeReaderViewController!) {
         self.dismissViewControllerAnimated(true, completion: { () -> Void in
-            self.performSegueWithIdentifier("showWeb", sender: self)
+//            let url = "https://zhouqi.work/item/f9f62d"
+//            ItemApi.sharedInstance.getItem(url, callback: { (item:Item) -> Void in
+//                item.itemUrl = url
+//                let realm = try! Realm()
+//                
+//                try! realm.write {
+//                    realm.add(item)
+//                }
+//                self.reloadDataFromRealm()
+//            })
+//            let item = Item()
+//            let realm = try! Realm()
+//            
+//            try! realm.write {
+//                realm.add(item)
+//            }
+//            self.reloadDataFromRealm()
+//            self.performSegueWithIdentifier("showWeb", sender: self)
         })
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "showWeb" {
-            let itemDetailController:ItemDetailWebViewController = segue.destinationViewController as! ItemDetailWebViewController
+        if segue.identifier == "ShowItemDetail" {
+            let itemDetailController:ItemDetailController = segue.destinationViewController as! ItemDetailController
             if let url = self.scanResult {
-                itemDetailController.setUrl(url)
+                itemDetailController.url = url
             } else {
-                itemDetailController.setUrl("http://baidu.com/")
+//                self.items[self.tableView.indexPathForSelectedRow!.item].itemUrl
+                itemDetailController.url = self.items[self.tableView.indexPathForSelectedRow!.item].itemUrl
             }
             
         }

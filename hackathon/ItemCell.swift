@@ -65,7 +65,7 @@ class ItemCell: UITableViewCell {
         return 50
     }
     
-    func setItem(item: Item) {
+    func setItem1(item: Item) {
         self.item = item
         self.itemPriceLabel.text = self.item.itemPrice
         self.itemNameLabel.text = self.item.itemName

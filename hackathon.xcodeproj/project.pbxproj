@@ -25,6 +25,7 @@
 		DAF759CC1C1956D600537812 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DAF759CA1C1956D600537812 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DAF759CF1C1957F900537812 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAF759CE1C1957F900537812 /* RealmSwift.framework */; };
 		DAF759D01C1957F900537812 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DAF759CE1C1957F900537812 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DAF759D21C19738900537812 /* ItemDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF759D11C19738900537812 /* ItemDetailController.swift */; };
 		F791EAC3CA2D7F825CC64316 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB68F8819BC4E9F1C36B8E37 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +88,7 @@
 		DAF759C31C1952C700537812 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "../../Downloads/realm-swift-0.96.3/ios/swift-2.1/Realm.framework"; sourceTree = "<group>"; };
 		DAF759CA1C1956D600537812 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		DAF759CE1C1957F900537812 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		DAF759D11C19738900537812 /* ItemDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailController.swift; sourceTree = "<group>"; };
 		EB68F8819BC4E9F1C36B8E37 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -202,6 +204,7 @@
 			children = (
 				DAF759BF1C191D6E00537812 /* ItemListController.swift */,
 				DAF759C11C191E0100537812 /* ItemDetailWebViewController.swift */,
+				DAF759D11C19738900537812 /* ItemDetailController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -438,6 +441,7 @@
 				DAF759BE1C191D2B00537812 /* ItemCell.swift in Sources */,
 				DAF759841C191A1800537812 /* FirstViewController.swift in Sources */,
 				DAF759BC1C191D0200537812 /* Item+Api.swift in Sources */,
+				DAF759D21C19738900537812 /* ItemDetailController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
