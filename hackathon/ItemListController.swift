@@ -44,11 +44,11 @@ class ItemListController: UITableViewController, QRCodeReaderDelegate {
     
     func reloadDataFromCache() {
         var items:[Item]! = []
-        items.append(Item(itemId: 1, itemName: "牙刷", itemDesc: "", itemPrice: "5.00", buyHistories: []))
-        items.append(Item(itemId: 2, itemName: "牙膏", itemDesc: "", itemPrice: "12.00", buyHistories: []))
-        items.append(Item(itemId: 3, itemName: "洗发水", itemDesc: "", itemPrice: "20.00", buyHistories: []))
-        items.append(Item(itemId: 4, itemName: "护发素", itemDesc: "", itemPrice: "30.00", buyHistories: []))
-        items.append(Item(itemId: 5, itemName: "面霜", itemDesc: "", itemPrice: "40.00", buyHistories: []))
+        items.append(Item(itemUrl: "", itemId: 1, itemName: "牙刷", itemDesc: "", itemPrice: "5.00", buyHistories: []))
+        items.append(Item(itemUrl: "", itemId: 2, itemName: "牙膏", itemDesc: "", itemPrice: "12.00", buyHistories: []))
+        items.append(Item(itemUrl: "", itemId: 3, itemName: "洗发水", itemDesc: "", itemPrice: "20.00", buyHistories: []))
+        items.append(Item(itemUrl: "", itemId: 4, itemName: "护发素", itemDesc: "", itemPrice: "30.00", buyHistories: []))
+        items.append(Item(itemUrl: "", itemId: 5, itemName: "面霜", itemDesc: "", itemPrice: "40.00", buyHistories: []))
         self.items = items
     }
     

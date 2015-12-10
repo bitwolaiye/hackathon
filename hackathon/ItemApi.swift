@@ -12,6 +12,18 @@ import SwiftyJSON
 
 class ItemApi: NSObject {
     static let sharedInstance = ItemApi()
+    func getItem(url: String, callback: (Item) -> Void) -> Void {
+        let request = Alamofire.request(.GET, url)
+        request.responseJSON {
+            response in
+            if let value = response.result.value {
+                let json = JSON(value)
+                callback(Item.load(json))
+                print("JSON: \(json)")
+            }
+        }
+    }
+    
     func getList(callback: ([Item]) -> Void) -> Void {
         let request = Alamofire.request(.GET, "https://zhouqi.work/item/api/v1/user/1/item")
         request.responseJSON {
@@ -20,7 +32,7 @@ class ItemApi: NSObject {
                 
                 let json = JSON(value)
                 let list: Array<JSON> = json["items"].arrayValue
-                callback(Item.load_from(list))
+                callback(Item.load_array(list))
                 //                if let name = json["items"] as NSArray {
                 //                    //Do something you want
                 //                } else {
