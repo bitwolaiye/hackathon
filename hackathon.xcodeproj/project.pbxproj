@@ -22,12 +22,7 @@
 		DAF759BE1C191D2B00537812 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF759BD1C191D2B00537812 /* ItemCell.swift */; };
 		DAF759C01C191D6E00537812 /* ItemListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF759BF1C191D6E00537812 /* ItemListController.swift */; };
 		DAF759C21C191E0100537812 /* ItemDetailWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF759C11C191E0100537812 /* ItemDetailWebViewController.swift */; };
-		DAF759CB1C1956D600537812 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAF759CA1C1956D600537812 /* Realm.framework */; };
-		DAF759CC1C1956D600537812 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DAF759CA1C1956D600537812 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DAF759CF1C1957F900537812 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAF759CE1C1957F900537812 /* RealmSwift.framework */; };
-		DAF759D01C1957F900537812 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DAF759CE1C1957F900537812 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DAF759D21C19738900537812 /* ItemDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF759D11C19738900537812 /* ItemDetailController.swift */; };
-		F791EAC3CA2D7F825CC64316 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB68F8819BC4E9F1C36B8E37 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,21 +41,6 @@
 			remoteInfo = hackathon;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		DAF759CD1C1956D600537812 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				DAF759D01C1957F900537812 /* RealmSwift.framework in Embed Frameworks */,
-				DAF759CC1C1956D600537812 /* Realm.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		11F7AFB7205F15B47BB23E21 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -87,11 +67,7 @@
 		DAF759BD1C191D2B00537812 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		DAF759BF1C191D6E00537812 /* ItemListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemListController.swift; sourceTree = "<group>"; };
 		DAF759C11C191E0100537812 /* ItemDetailWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailWebViewController.swift; sourceTree = "<group>"; };
-		DAF759C31C1952C700537812 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "../../Downloads/realm-swift-0.96.3/ios/swift-2.1/Realm.framework"; sourceTree = "<group>"; };
-		DAF759CA1C1956D600537812 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
-		DAF759CE1C1957F900537812 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		DAF759D11C19738900537812 /* ItemDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailController.swift; sourceTree = "<group>"; };
-		EB68F8819BC4E9F1C36B8E37 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +75,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAF759CB1C1956D600537812 /* Realm.framework in Frameworks */,
-				F791EAC3CA2D7F825CC64316 /* Pods.framework in Frameworks */,
-				DAF759CF1C1957F900537812 /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,8 +107,6 @@
 		746BE1184C24EEACC285D041 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DAF759C31C1952C700537812 /* Realm.framework */,
-				EB68F8819BC4E9F1C36B8E37 /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -143,8 +114,6 @@
 		DAF759751C191A1800537812 = {
 			isa = PBXGroup;
 			children = (
-				DAF759CE1C1957F900537812 /* RealmSwift.framework */,
-				DAF759CA1C1956D600537812 /* Realm.framework */,
 				DAF759801C191A1800537812 /* hackathon */,
 				DAF759971C191A1900537812 /* hackathonTests */,
 				DAF759A21C191A1900537812 /* hackathonUITests */,
@@ -250,8 +219,6 @@
 				DAF7597C1C191A1800537812 /* Resources */,
 				963E4402A7162EB6A12B7D29 /* Embed Pods Frameworks */,
 				B656C4069E1297DAA93634F9 /* Copy Pods Resources */,
-				DAF759CD1C1956D600537812 /* Embed Frameworks */,
-				DAF759C91C19530A00537812 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -399,19 +366,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
-		};
-		DAF759C91C19530A00537812 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework/strip-frameworks.sh\"";
 		};
 		EEE1707698CD8973D2B5E74C /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

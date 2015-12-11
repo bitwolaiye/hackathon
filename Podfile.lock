@@ -1,7 +1,12 @@
 PODS:
   - Alamofire (3.1.3)
   - QRCodeReaderViewController (4.0.1)
-  - RAMAnimatedTabBarController (1.0.1)
+  - RAMAnimatedTabBarController (1.0.4)
+  - Realm (0.96.3):
+    - Realm/Headers (= 0.96.3)
+  - Realm/Headers (0.96.3)
+  - RealmSwift (0.96.3):
+    - Realm (= 0.96.3)
   - SnapKit (0.15.0)
   - SwiftDate (2.0.2)
   - SwiftyJSON (2.3.2)
@@ -10,17 +15,23 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 3.0)
   - QRCodeReaderViewController (~> 4.0.1)
-  - RAMAnimatedTabBarController
+  - RAMAnimatedTabBarController (from `https://github.com/Ramotion/animated-tab-bar`)
+  - RealmSwift
   - SnapKit (~> 0.15.0)
   - SwiftDate (~> 2.0)
   - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
   - Toast-Swift (~> 1.0.0)
 
 EXTERNAL SOURCES:
+  RAMAnimatedTabBarController:
+    :git: https://github.com/Ramotion/animated-tab-bar
   SwiftyJSON:
     :git: https://github.com/SwiftyJSON/SwiftyJSON.git
 
 CHECKOUT OPTIONS:
+  RAMAnimatedTabBarController:
+    :commit: f9f0e4b53e660dd99fbd177d0379775977288b18
+    :git: https://github.com/Ramotion/animated-tab-bar
   SwiftyJSON:
     :commit: 8e618c8baf6323a5079c6549bb38d48357b31630
     :git: https://github.com/SwiftyJSON/SwiftyJSON.git
@@ -28,7 +39,9 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: 9f93b56389e48def9220dd57d1f44b1927229a5a
   QRCodeReaderViewController: 6538745c8f4ffa9407a26bd7f9489ea01739e7b0
-  RAMAnimatedTabBarController: 58b220dff7ad27efff90663a8656f3a73f8e76b6
+  RAMAnimatedTabBarController: 6e7dd2718f7fe8009d17c877fbd394da703fb3c7
+  Realm: 145d3cdf78a03aee71bde5381ad7e542bd541720
+  RealmSwift: aab84968aad662f61f36473d1aea019f63481505
   SnapKit: 4962eed2ee18e48cbd2b2292fffc57efe7235f87
   SwiftDate: b4f4d0962afe48365ad2800c9850a6626deb9359
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
