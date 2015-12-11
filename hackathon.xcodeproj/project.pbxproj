@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		42F5B91877FFF3CC1CD9767F /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 662AFE6437A05BD71CC983A0 /* Pods.framework */; };
+		DA594B551C1AC5FC00594AD1 /* ItemDetail2Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA594B541C1AC5FC00594AD1 /* ItemDetail2Controller.swift */; };
+		DA594B571C1AC6DF00594AD1 /* ItemDetailWebView2Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA594B561C1AC6DF00594AD1 /* ItemDetailWebView2Controller.swift */; };
 		DA7E535F1C19BC450006491E /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E535E1C19BC450006491E /* HistoryCell.swift */; };
 		DAF759821C191A1800537812 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF759811C191A1800537812 /* AppDelegate.swift */; };
 		DAF759841C191A1800537812 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF759831C191A1800537812 /* FirstViewController.swift */; };
@@ -48,6 +50,8 @@
 		662AFE6437A05BD71CC983A0 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C19797E3C7EAE7CA0048208 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		DA594B531C1AA0C400594AD1 /* hackathon.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = hackathon.entitlements; sourceTree = "<group>"; };
+		DA594B541C1AC5FC00594AD1 /* ItemDetail2Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetail2Controller.swift; sourceTree = "<group>"; };
+		DA594B561C1AC6DF00594AD1 /* ItemDetailWebView2Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailWebView2Controller.swift; sourceTree = "<group>"; };
 		DA7E535E1C19BC450006491E /* HistoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryCell.swift; sourceTree = "<group>"; };
 		DAF7597E1C191A1800537812 /* hackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAF759811C191A1800537812 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +120,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DA594B581C1AC72F00594AD1 /* item_api */ = {
+			isa = PBXGroup;
+			children = (
+				DAF759C11C191E0100537812 /* ItemDetailWebViewController.swift */,
+				DAF759D11C19738900537812 /* ItemDetailController.swift */,
+			);
+			name = item_api;
+			sourceTree = "<group>";
+		};
 		DAF759751C191A1800537812 = {
 			isa = PBXGroup;
 			children = (
@@ -179,9 +192,10 @@
 		DAF759B11C191B0500537812 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				DA594B581C1AC72F00594AD1 /* item_api */,
 				DAF759BF1C191D6E00537812 /* ItemListController.swift */,
-				DAF759C11C191E0100537812 /* ItemDetailWebViewController.swift */,
-				DAF759D11C19738900537812 /* ItemDetailController.swift */,
+				DA594B541C1AC5FC00594AD1 /* ItemDetail2Controller.swift */,
+				DA594B561C1AC6DF00594AD1 /* ItemDetailWebView2Controller.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -406,12 +420,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA594B571C1AC6DF00594AD1 /* ItemDetailWebView2Controller.swift in Sources */,
 				DAF759BA1C191CCD00537812 /* Item.swift in Sources */,
 				DAF759C21C191E0100537812 /* ItemDetailWebViewController.swift in Sources */,
 				DAF759861C191A1800537812 /* SecondViewController.swift in Sources */,
 				DAF759C01C191D6E00537812 /* ItemListController.swift in Sources */,
 				DAF759B71C191C0700537812 /* ItemApi.swift in Sources */,
 				DAF759821C191A1800537812 /* AppDelegate.swift in Sources */,
+				DA594B551C1AC5FC00594AD1 /* ItemDetail2Controller.swift in Sources */,
 				DAF759BE1C191D2B00537812 /* ItemCell.swift in Sources */,
 				DAF759841C191A1800537812 /* FirstViewController.swift in Sources */,
 				DAF759BC1C191D0200537812 /* Item+Api.swift in Sources */,

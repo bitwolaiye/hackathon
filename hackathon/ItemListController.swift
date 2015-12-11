@@ -119,7 +119,7 @@ class ItemListController: UITableViewController, QRCodeReaderDelegate {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "ShowItemDetail" {
-            let itemDetailController:ItemDetailController = segue.destinationViewController as! ItemDetailController
+            let itemDetailController:ItemDetail2Controller = segue.destinationViewController as! ItemDetail2Controller
             if let url = self.scanResult {
                 itemDetailController.url = url
             } else {
