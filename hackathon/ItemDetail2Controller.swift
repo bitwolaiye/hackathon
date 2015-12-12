@@ -29,7 +29,7 @@ class ItemDetail2Controller: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         self.edgesForExtendedLayout = UIRectEdge.None
-        let u = "http://172.21.208.47:8120/mobile/product"
+        let u = "http://172.21.208.47:8120/mobile/p0001/product"
         self.request = NSURLRequest(URL: NSURL(string: u)!)
         self.webView.loadRequest(request)
     }
@@ -37,7 +37,7 @@ class ItemDetail2Controller: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "ShowItemDetailWeb" {
             let itemDetailController:ItemDetailWebView2Controller = segue.destinationViewController as! ItemDetailWebView2Controller
-            itemDetailController.setUrl("http://172.21.208.47:8120/mobile/buy")
+            itemDetailController.setUrl("http://172.21.208.47:8120/mobile/p0001/buy?token=51c3954031cedb19ab5f3d741c687fe75035bba897f395458a22245dc6dfaedd")
 //            itemDetailController.setUrl(self.url + "/show")
             //            if let url = self.scanResult {
             //                itemDetailController.url = url

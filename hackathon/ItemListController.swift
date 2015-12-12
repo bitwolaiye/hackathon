@@ -43,11 +43,11 @@ class ItemListController: UITableViewController, QRCodeReaderDelegate {
     }
     
     func reloadDataFromApi() {
-//        let selfController:ItemListController = self
-//        ItemApi.sharedInstance.getList { (item: [Item]) -> Void in
-//            selfController.items = item
-//            self.tableView.reloadData()
-//        }
+        let selfController:ItemListController = self
+        ItemApi.sharedInstance.getList { (item: [Item]) -> Void in
+            selfController.items = item
+            self.tableView.reloadData()
+        }
     }
     
     func reloadDataFromCache() {
