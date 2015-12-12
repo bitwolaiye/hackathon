@@ -28,7 +28,7 @@ class OrderListController: UITableViewController {
         //        let token = ""
         let token = defaults.stringForKey("token")!
         print("get token \(token) ok!")
-        OrderApi.sharedInstance.getList("http://172.21.208.13:8120/mobile/order/data?token=" + token, callback: { (orders:[Order]) -> Void in
+        OrderApi.sharedInstance.getList("http://45.78.63.245/mobile/order/data?token=" + token, callback: { (orders:[Order]) -> Void in
             selfController.orders = orders
             selfController.tableView.reloadData()
         })
