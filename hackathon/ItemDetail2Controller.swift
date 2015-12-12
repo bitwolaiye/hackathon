@@ -17,7 +17,7 @@ class ItemDetail2Controller: UIViewController {
     
     override func viewDidLoad() {
         let url = self.url
-        ItemApi.sharedInstance.getItem(url, callback: { (item:Item) -> Void in
+        ItemApi.sharedInstance.getItemFromJL(url + "/product/data", callback: { (item:Item) -> Void in
             item.itemUrl = url
             item.saveOrUpdate()
         })
@@ -29,7 +29,12 @@ class ItemDetail2Controller: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         self.edgesForExtendedLayout = UIRectEdge.None
-        let u = "http://172.21.208.47:8120/mobile/p0001/product"
+//        let u = "http://172.21.208.47:8120/mobile/p0001/product"
+        let defaults = NSUserDefaults.standardUserDefaults()
+//        let token = ""
+        let token = defaults.stringForKey("token")!
+        print("get token \(token) ok!")
+        let u = self.url + "/product?token=" + token
         self.request = NSURLRequest(URL: NSURL(string: u)!)
         self.webView.loadRequest(request)
     }
@@ -37,7 +42,12 @@ class ItemDetail2Controller: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "ShowItemDetailWeb" {
             let itemDetailController:ItemDetailWebView2Controller = segue.destinationViewController as! ItemDetailWebView2Controller
-            itemDetailController.setUrl("http://172.21.208.47:8120/mobile/p0001/buy?token=51c3954031cedb19ab5f3d741c687fe75035bba897f395458a22245dc6dfaedd")
+            let defaults = NSUserDefaults.standardUserDefaults()
+//            let token = ""
+            let token = defaults.stringForKey("token")!
+            print("get token \(token) ok!")
+            itemDetailController.setUrl(self.url + "/buy?token=" + token)
+//            itemDetailController.setUrl("http://172.21.208.47:8120/mobile/p0001/buy?token=51c3954031cedb19ab5f3d741c687fe75035bba897f395458a22245dc6dfaedd")
 //            itemDetailController.setUrl(self.url + "/show")
             //            if let url = self.scanResult {
             //                itemDetailController.url = url

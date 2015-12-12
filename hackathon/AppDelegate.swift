@@ -16,9 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-//        var types: UIUserNotificationType = UIUserNotificationType.Alert
-//        
-//        var settings: UIUserNotificationSettings = UIUserNotificationSettings( forTypes: types, categories: nil )
         let settings = UIUserNotificationSettings(forTypes: .Alert, categories: nil)
         UIApplication.sharedApplication().registerUserNotificationSettings(settings)
         application.registerUserNotificationSettings( settings )
@@ -61,6 +58,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             .stringByReplacingOccurrencesOfString( " ", withString: "" ) as String
         
         print( deviceTokenString )
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setObject(deviceTokenString, forKey: "token")
+        defaults.synchronize()
+        print(defaults.objectForKey("token"))
+        print(defaults.stringForKey("token"))
     }
     
     func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {

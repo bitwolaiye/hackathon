@@ -58,6 +58,7 @@ class OrderCell: UITableViewCell {
         
         orderStatusLabel.font = UIFont.systemFontOfSize(12)
         orderStatusLabel.snp_makeConstraints { (make) -> Void in
+            make.top.equalTo(itemNameLabel.snp_bottom).offset(5)
             make.left.equalTo(orderTimeLabel.snp_right).offset(10)
             make.width.equalTo(100)
         }
@@ -77,6 +78,6 @@ class OrderCell: UITableViewCell {
         self.itemNameLabel.text = self.order.itemName
         self.orderTimeLabel.text = self.order.orderTime.toRelativeCocoaString()!
         self.orderStatusLabel.text = self.order.orderStatus
-        self.orderPriceLabel.text = self.order.orderStatus
+        self.orderPriceLabel.text = "￥" + self.order.orderPrice
     }
 }

@@ -13,16 +13,22 @@ class OrderListController: UITableViewController {
     var orders:[Order]!
     
     override func viewWillAppear(animated: Bool) {
-        if orders == nil || orders.count == 0 {
+//        if orders == nil || orders.count == 0 {
+            orders = []
             self.reloadDataFromApi()
-        }
-        self.navigationController?.navigationBarHidden = false;
+//        }
+        self.navigationController?.navigationBarHidden = false
+        self.navigationController!.navigationBar.translucent = false
     }
 
     
     func reloadDataFromApi() {
         let selfController:OrderListController = self
-        OrderApi.sharedInstance.getList("", callback: { (orders:[Order]) -> Void in
+        let defaults = NSUserDefaults.standardUserDefaults()
+        //        let token = ""
+        let token = defaults.stringForKey("token")!
+        print("get token \(token) ok!")
+        OrderApi.sharedInstance.getList("http://172.21.208.13:8120/mobile/order/data?token=" + token, callback: { (orders:[Order]) -> Void in
             selfController.orders = orders
             selfController.tableView.reloadData()
         })
@@ -41,6 +47,10 @@ class OrderListController: UITableViewController {
 
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return OrderCell().height()
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.performSegueWithIdentifier("ShowOrderDetailWeb", sender: self)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

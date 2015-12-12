@@ -17,6 +17,7 @@
 		DAAFD3521C1BB00800824370 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAFD3511C1BB00800824370 /* Order.swift */; };
 		DAAFD3541C1BB56300824370 /* OrderApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAFD3531C1BB56300824370 /* OrderApi.swift */; };
 		DAAFD3561C1BB57400824370 /* Order+Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAFD3551C1BB57400824370 /* Order+Api.swift */; };
+		DAAFD3581C1BBA1500824370 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAFD3571C1BBA1500824370 /* ProfileViewController.swift */; };
 		DAF759821C191A1800537812 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF759811C191A1800537812 /* AppDelegate.swift */; };
 		DAF759841C191A1800537812 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF759831C191A1800537812 /* FirstViewController.swift */; };
 		DAF759861C191A1800537812 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF759851C191A1800537812 /* SecondViewController.swift */; };
@@ -65,6 +66,7 @@
 		DAAFD3511C1BB00800824370 /* Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		DAAFD3531C1BB56300824370 /* OrderApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderApi.swift; sourceTree = "<group>"; };
 		DAAFD3551C1BB57400824370 /* Order+Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Order+Api.swift"; sourceTree = "<group>"; };
+		DAAFD3571C1BBA1500824370 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		DAF7597E1C191A1800537812 /* hackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAF759811C191A1800537812 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAF759831C191A1800537812 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 				DA594B561C1AC6DF00594AD1 /* ItemDetailWebView2Controller.swift */,
 				DAAFD34B1C1BAE6200824370 /* OrderDetailWebViewController.swift */,
 				DAAFD34D1C1BAEED00824370 /* OrderListController.swift */,
+				DAAFD3571C1BBA1500824370 /* ProfileViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -324,7 +327,7 @@
 								enabled = 1;
 							};
 							com.apple.SafariKeychain = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -440,6 +443,7 @@
 			files = (
 				DA594B571C1AC6DF00594AD1 /* ItemDetailWebView2Controller.swift in Sources */,
 				DAAFD34C1C1BAE6200824370 /* OrderDetailWebViewController.swift in Sources */,
+				DAAFD3581C1BBA1500824370 /* ProfileViewController.swift in Sources */,
 				DAF759BA1C191CCD00537812 /* Item.swift in Sources */,
 				DAF759C21C191E0100537812 /* ItemDetailWebViewController.swift in Sources */,
 				DAF759861C191A1800537812 /* SecondViewController.swift in Sources */,
@@ -597,7 +601,6 @@
 			baseConfigurationReference = 11F7AFB7205F15B47BB23E21 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = hackathon/hackathon.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -616,7 +619,6 @@
 			baseConfigurationReference = 7C19797E3C7EAE7CA0048208 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = hackathon/hackathon.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

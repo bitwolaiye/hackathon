@@ -36,5 +36,13 @@ extension Item {
         item.buyHistories.appendContentsOf(BuyHistory.load_array(json["histories"].arrayValue))
         return item
     }
+    
+    static func loadFromJL(json: JSON) -> Item {
+        let itemDict = ["itemId": 0, "itemName": json["title"].string!, "itemDesc": "", "itemPrice": json["price"].string!, "orderCnt": json["count"].int!]
+        let item = Item(value: itemDict)
+//        item.buyHistories.appendContentsOf(BuyHistory.load_array(json["histories"].arrayValue))
+        return item
+    }
+
 }
 

@@ -53,12 +53,7 @@ class ItemCell: UITableViewCell {
         itemBuyCntLabel.snp_makeConstraints { (make) -> Void in
             make.right.equalTo(self).offset(-20)
             make.top.equalTo(20)
-            //            make.left.equalTo(contentView.snp_centerX)
-            //            make.height.equalTo(20)
-            //            make.width.equalTo(100)
         }
-        //        itemPriceLabel.backgroundColor = UIColor.blueColor()
-        //        itemBuyCntLabel.backgroundColor = UIColor.greenColor()
     }
     
     func height() -> CGFloat {
@@ -67,9 +62,9 @@ class ItemCell: UITableViewCell {
     
     func setItem1(item: Item) {
         self.item = item
-        self.itemPriceLabel.text = self.item.itemPrice
+        self.itemPriceLabel.text = "￥" + self.item.itemPrice
         self.itemNameLabel.text = self.item.itemName
-        self.itemBuyCntLabel.text = String(self.item.buyHistories.count)
+        self.itemBuyCntLabel.text = "已购买 \(self.item.orderCnt) 次"
     }
     
     func showPrice(price: Int) -> String {

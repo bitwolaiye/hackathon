@@ -24,6 +24,7 @@ class Item: Object {
     dynamic var itemName:String = ""
     dynamic var itemDesc:String = ""
     dynamic var itemPrice:String = ""
+    dynamic var orderCnt = 0
     
     override static func primaryKey() -> String? {
         return "itemUrl"

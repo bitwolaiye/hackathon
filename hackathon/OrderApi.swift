@@ -19,7 +19,7 @@ class OrderApi: NSObject {
             response in
             if let value = response.result.value {
                 let json = JSON(value)
-                let list: Array<JSON> = json["orders"].arrayValue
+                let list: Array<JSON> = json["data"].arrayValue
                 callback(Order.load_array(list))
             }
         }

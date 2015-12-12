@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--Title-->
+        <!--购买记录-->
         <scene sceneID="hZo-hy-Zxu">
             <objects>
                 <tableViewController id="gHo-Wa-6D2" customClass="ItemListController" customModule="hackathon" customModuleProvider="target" sceneMemberID="viewController">
@@ -31,12 +31,12 @@
                             <outlet property="delegate" destination="gHo-Wa-6D2" id="tdy-RT-fgA"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Title" id="oAC-Uk-hng">
+                    <navigationItem key="navigationItem" title="购买记录" id="oAC-Uk-hng">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="HhI-lu-a5u">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="lTv-Pw-djz">
                                 <rect key="frame" x="520" y="7" width="60" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Scan"/>
+                                <state key="normal" title="扫码"/>
                                 <connections>
                                     <action selector="scan:" destination="gHo-Wa-6D2" eventType="touchUpInside" id="r0L-cV-2ML"/>
                                 </connections>
@@ -48,7 +48,7 @@
             </objects>
             <point key="canvasLocation" x="1570" y="-1033"/>
         </scene>
-        <!--Root View Controller-->
+        <!--订单详情-->
         <scene sceneID="NpW-jq-TaN">
             <objects>
                 <tableViewController id="qCi-Mp-9Su" customClass="OrderListController" customModule="hackathon" customModuleProvider="target" sceneMemberID="viewController">
@@ -74,16 +74,16 @@
                             <outlet property="delegate" destination="qCi-Mp-9Su" id="MeT-Ks-zhZ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="ZKi-C0-Nt4"/>
+                    <navigationItem key="navigationItem" title="订单详情" id="ZKi-C0-Nt4"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="icN-YN-gaI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1566" y="-175"/>
+            <point key="canvasLocation" x="1566" y="-304"/>
         </scene>
         <!--Order Detail Web View Controller-->
         <scene sceneID="I0d-Bm-akr">
             <objects>
-                <viewController id="zPy-Xk-Zih" customClass="OrderDetailWebViewController" customModule="hackathon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="zPy-Xk-Zih" customClass="OrderDetailWebViewController" customModule="hackathon" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tHe-WA-izo"/>
                         <viewControllerLayoutGuide type="bottom" id="SFm-O1-2x4"/>
@@ -106,13 +106,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BAA-1X-ZZP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2271" y="-175"/>
+            <point key="canvasLocation" x="2271" y="-304"/>
         </scene>
-        <!--Order-->
+        <!--订单-->
         <scene sceneID="6sp-WU-tb2">
             <objects>
                 <navigationController id="NqU-Ko-DEt" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Order" id="nS1-WP-oQy"/>
+                    <tabBarItem key="tabBarItem" title="订单" image="order" selectedImage="order_selected" id="nS1-WP-oQy"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZiP-j7-cpv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -123,7 +123,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6bX-i3-URi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="-175"/>
+            <point key="canvasLocation" x="750" y="-304"/>
         </scene>
         <!--Item Detail Web View2 Controller-->
         <scene sceneID="STL-Bp-lEb">
@@ -180,7 +180,7 @@
             </objects>
             <point key="canvasLocation" x="3014" y="-1033"/>
         </scene>
-        <!--Title-->
+        <!--商品详情-->
         <scene sceneID="SAA-B0-G3R">
             <objects>
                 <viewController hidesBottomBarWhenPushed="YES" id="YDE-90-PGb" customClass="ItemDetail2Controller" customModule="hackathon" customModuleProvider="target" sceneMemberID="viewController">
@@ -195,17 +195,17 @@
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hwe-nh-kOp">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
-                                <variation key="widthClass=compact" preservesSuperviewLayoutMargins="NO"/>
+                                <variation key="widthClass=regular" preservesSuperviewLayoutMargins="NO"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="xFb-kB-hzE">
+                    <navigationItem key="navigationItem" title="商品详情" id="xFb-kB-hzE">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="GiQ-RX-qyV">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6TW-w7-cUJ">
                                 <rect key="frame" x="520" y="7" width="60" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Buy"/>
+                                <state key="normal" title="购买"/>
                                 <connections>
                                     <segue destination="oJz-mi-wDH" kind="show" identifier="ShowItemDetailWeb" id="RUq-jH-JpM"/>
                                 </connections>
@@ -269,11 +269,11 @@
             </objects>
             <point key="canvasLocation" x="2271" y="-1033"/>
         </scene>
-        <!--List-->
+        <!--首页-->
         <scene sceneID="pmb-yg-LVK">
             <objects>
                 <navigationController id="pHV-7b-VYo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="List" id="wUs-Gj-mh4"/>
+                    <tabBarItem key="tabBarItem" title="首页" image="item" selectedImage="item_selected" id="wUs-Gj-mh4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ski-DE-Fsr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -286,10 +286,10 @@
             </objects>
             <point key="canvasLocation" x="750" y="-1033"/>
         </scene>
-        <!--Second-->
+        <!--我-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="hackathon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8rJ-Kc-sve" customClass="ProfileViewController" customModule="hackathon" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
@@ -297,30 +297,9 @@
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <rect key="frame" x="195" y="279" width="209.5" height="41.5"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <rect key="frame" x="192" y="329" width="215.5" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" symbolic="YES" id="Day-4N-Vmt"/>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="JgO-Fn-dHn"/>
-                            <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
-                            <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
-                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="我" image="profile" selectedImage="profile_selected" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -348,6 +327,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="second" width="30" height="30"/>
+        <image name="item" width="22" height="22"/>
+        <image name="item_selected" width="22" height="22"/>
+        <image name="order" width="22" height="22"/>
+        <image name="order_selected" width="22" height="22"/>
+        <image name="profile" width="22" height="22"/>
+        <image name="profile_selected" width="22" height="22"/>
     </resources>
 </document>

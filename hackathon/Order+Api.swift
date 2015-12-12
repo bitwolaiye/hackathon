@@ -12,9 +12,11 @@ import SwiftDate
 
 extension Order {
     static func load_array(array: Array<JSON>) -> [Order] {
-        let orders = [Order]()
+        var orders = [Order]()
         for each:JSON in array {
-            //            items.append(Item(itemUrl: "", itemId: each["item_id"].int!, itemName: each["item_name"].string!, itemDesc: each["item_desc"].string!, itemPrice: each["item_price"].string!, buyHistories: []))
+            let orderDict = ["itemName": each["title"].string!, "orderUrl": each["url"].string!, "orderStatus": each["status"].string!, "orderPrice": each["price"].string!, "orderTime": each["createTime"].string!.toDate(DateFormat.Custom("YYYY-MM-dd HH:mm"))!]
+            let order = Order(value: orderDict)
+            orders.append(order)
         }
         return orders
     }

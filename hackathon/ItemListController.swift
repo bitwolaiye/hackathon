@@ -86,12 +86,22 @@ class ItemListController: UITableViewController, QRCodeReaderDelegate {
     
     func reader(reader: QRCodeReaderViewController!, didScanResult result: String!) {
         self.dismissViewControllerAnimated(true) { () -> Void in
-            if result.hasPrefix("https://zhouqi.work/") {
+            if self.checkPreFix(result) {
                 self.scanResult = result
                 self.performSegueWithIdentifier("ShowItemDetail", sender: nil)
             }
             NSLog("%@", result)
         }
+    }
+    
+    func checkPreFix(url:String) -> Bool {
+        let whiteList = ["https://zhouqi.work/", "http://172.21.208.13:8120/"]
+        for e in whiteList {
+            if url.hasPrefix(e) {
+                return true
+            }
+        }
+        return false
     }
     
     func readerDidCancel(reader: QRCodeReaderViewController!) {

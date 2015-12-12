@@ -24,6 +24,18 @@ class ItemApi: NSObject {
         }
     }
     
+    func getItemFromJL(url: String, callback: (Item) -> Void) -> Void {
+        let request = Alamofire.request(.GET, url)
+        request.responseJSON {
+            response in
+            if let value = response.result.value {
+                let json = JSON(value)
+                callback(Item.loadFromJL(json["data"]))
+                print("JSON: \(json)")
+            }
+        }
+    }
+    
     func getList(callback: ([Item]) -> Void) -> Void {
         let request = Alamofire.request(.GET, "https://zhouqi.work/item/api/v1/user/1/item")
         request.responseJSON {
