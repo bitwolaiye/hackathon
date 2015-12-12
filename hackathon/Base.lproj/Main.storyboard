@@ -8,13 +8,13 @@
         <!--购买记录-->
         <scene sceneID="hZo-hy-Zxu">
             <objects>
-                <tableViewController id="gHo-Wa-6D2" customClass="ItemListController" customModule="hackathon" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="gHo-Wa-6D2" customClass="ItemListController" customModule="扫一下" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="JHq-qc-X9c">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemCell" id="Oac-e8-BSl" customClass="ItemCell" customModule="hackathon" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemCell" id="Oac-e8-BSl" customClass="ItemCell" customModule="扫一下" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Oac-e8-BSl" id="hrS-0b-nlL">
@@ -51,13 +51,13 @@
         <!--订单详情-->
         <scene sceneID="NpW-jq-TaN">
             <objects>
-                <tableViewController id="qCi-Mp-9Su" customClass="OrderListController" customModule="hackathon" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="qCi-Mp-9Su" customClass="OrderListController" customModule="扫一下" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="9kJ-Yw-M51">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="OrderCell" id="zcM-a8-KhC" customClass="OrderCell" customModule="hackathon" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="OrderCell" id="zcM-a8-KhC" customClass="OrderCell" customModule="扫一下" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zcM-a8-KhC" id="opg-fZ-9r9">
@@ -83,7 +83,7 @@
         <!--Order Detail Web View Controller-->
         <scene sceneID="I0d-Bm-akr">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="zPy-Xk-Zih" customClass="OrderDetailWebViewController" customModule="hackathon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="zPy-Xk-Zih" customClass="OrderDetailWebViewController" customModule="扫一下" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tHe-WA-izo"/>
                         <viewControllerLayoutGuide type="bottom" id="SFm-O1-2x4"/>
@@ -128,7 +128,7 @@
         <!--Item Detail Web View2 Controller-->
         <scene sceneID="STL-Bp-lEb">
             <objects>
-                <viewController id="oJz-mi-wDH" customClass="ItemDetailWebView2Controller" customModule="hackathon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="oJz-mi-wDH" customClass="ItemDetailWebView2Controller" customModule="扫一下" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zfJ-C4-cH2"/>
                         <viewControllerLayoutGuide type="bottom" id="Ydo-7S-b1M"/>
@@ -156,7 +156,7 @@
         <!--Item Detail Web View Controller-->
         <scene sceneID="4MJ-WO-SIR">
             <objects>
-                <viewController id="YHq-Mz-Un8" customClass="ItemDetailWebViewController" customModule="hackathon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="YHq-Mz-Un8" customClass="ItemDetailWebViewController" customModule="扫一下" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jYF-YD-enR"/>
                         <viewControllerLayoutGuide type="bottom" id="hPi-Cc-pwB"/>
@@ -183,7 +183,7 @@
         <!--商品详情-->
         <scene sceneID="SAA-B0-G3R">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="YDE-90-PGb" customClass="ItemDetail2Controller" customModule="hackathon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="YDE-90-PGb" customClass="ItemDetail2Controller" customModule="扫一下" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kqx-TS-5OE"/>
                         <viewControllerLayoutGuide type="bottom" id="gvo-B2-INZ"/>
@@ -223,7 +223,7 @@
         <!--Title-->
         <scene sceneID="nJX-1x-NtR">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="twn-gT-Tvs" customClass="ItemDetailController" customModule="hackathon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="twn-gT-Tvs" customClass="ItemDetailController" customModule="扫一下" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bh5-Db-dXN"/>
                         <viewControllerLayoutGuide type="bottom" id="G2d-td-JAd"/>
@@ -289,7 +289,7 @@
         <!--我-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="ProfileViewController" customModule="hackathon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8rJ-Kc-sve" customClass="ProfileViewController" customModule="扫一下" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
