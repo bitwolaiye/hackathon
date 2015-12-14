@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DAF7597D1C191A1800537812"
-               BuildableName = "hackathon.app"
+               BuildableName = "&#x626b;&#x4e00;&#x4e0b;.app"
                BlueprintName = "hackathon"
                ReferencedContainer = "container:hackathon.xcodeproj">
             </BuildableReference>
@@ -53,7 +53,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DAF7597D1C191A1800537812"
-            BuildableName = "hackathon.app"
+            BuildableName = "&#x626b;&#x4e00;&#x4e0b;.app"
             BlueprintName = "hackathon"
             ReferencedContainer = "container:hackathon.xcodeproj">
          </BuildableReference>
@@ -76,7 +76,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DAF7597D1C191A1800537812"
-            BuildableName = "hackathon.app"
+            BuildableName = "&#x626b;&#x4e00;&#x4e0b;.app"
             BlueprintName = "hackathon"
             ReferencedContainer = "container:hackathon.xcodeproj">
          </BuildableReference>
@@ -95,7 +95,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DAF7597D1C191A1800537812"
-            BuildableName = "hackathon.app"
+            BuildableName = "&#x626b;&#x4e00;&#x4e0b;.app"
             BlueprintName = "hackathon"
             ReferencedContainer = "container:hackathon.xcodeproj">
          </BuildableReference>

@@ -95,7 +95,7 @@ class ItemListController: UITableViewController, QRCodeReaderDelegate {
     }
     
     func checkPreFix(url:String) -> Bool {
-        let whiteList = ["https://zhouqi.work/", "http://172.21.208.13:8120/"]
+        let whiteList = ["https://zhouqi.work/", "http://172.21.208.13:8120/", "http://45.78.63.245/", "http://45.78.63.245:80/", "http://fe.dev.baidu.com:8120/"]
         for e in whiteList {
             if url.hasPrefix(e) {
                 return true

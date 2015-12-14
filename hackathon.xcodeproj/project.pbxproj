@@ -33,6 +33,7 @@
 		DAF759C01C191D6E00537812 /* ItemListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF759BF1C191D6E00537812 /* ItemListController.swift */; };
 		DAF759C21C191E0100537812 /* ItemDetailWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF759C11C191E0100537812 /* ItemDetailWebViewController.swift */; };
 		DAF759D21C19738900537812 /* ItemDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF759D11C19738900537812 /* ItemDetailController.swift */; };
+		DAFD97791C1CFA0A00FE15E5 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFD97781C1CFA0A00FE15E5 /* SplashViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +57,6 @@
 		11F7AFB7205F15B47BB23E21 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		662AFE6437A05BD71CC983A0 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C19797E3C7EAE7CA0048208 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		DA594B531C1AA0C400594AD1 /* hackathon.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = hackathon.entitlements; sourceTree = "<group>"; };
 		DA594B541C1AC5FC00594AD1 /* ItemDetail2Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetail2Controller.swift; sourceTree = "<group>"; };
 		DA594B561C1AC6DF00594AD1 /* ItemDetailWebView2Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailWebView2Controller.swift; sourceTree = "<group>"; };
 		DA7E535E1C19BC450006491E /* HistoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryCell.swift; sourceTree = "<group>"; };
@@ -89,6 +89,7 @@
 		DAF759BF1C191D6E00537812 /* ItemListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemListController.swift; sourceTree = "<group>"; };
 		DAF759C11C191E0100537812 /* ItemDetailWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailWebViewController.swift; sourceTree = "<group>"; };
 		DAF759D11C19738900537812 /* ItemDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailController.swift; sourceTree = "<group>"; };
+		DAFD97781C1CFA0A00FE15E5 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,7 +169,6 @@
 		DAF759801C191A1800537812 /* hackathon */ = {
 			isa = PBXGroup;
 			children = (
-				DA594B531C1AA0C400594AD1 /* hackathon.entitlements */,
 				DAF759B51C191B4500537812 /* Apis */,
 				DAF759B41C191B3E00537812 /* Cells */,
 				DAF759B31C191B3200537812 /* Models */,
@@ -213,6 +213,7 @@
 				DAAFD34B1C1BAE6200824370 /* OrderDetailWebViewController.swift */,
 				DAAFD34D1C1BAEED00824370 /* OrderListController.swift */,
 				DAAFD3571C1BBA1500824370 /* ProfileViewController.swift */,
+				DAFD97781C1CFA0A00FE15E5 /* SplashViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -453,6 +454,7 @@
 				DAF759B71C191C0700537812 /* ItemApi.swift in Sources */,
 				DAF759821C191A1800537812 /* AppDelegate.swift in Sources */,
 				DA594B551C1AC5FC00594AD1 /* ItemDetail2Controller.swift in Sources */,
+				DAFD97791C1CFA0A00FE15E5 /* SplashViewController.swift in Sources */,
 				DAF759BE1C191D2B00537812 /* ItemCell.swift in Sources */,
 				DAAFD34E1C1BAEED00824370 /* OrderListController.swift in Sources */,
 				DAF759841C191A1800537812 /* FirstViewController.swift in Sources */,
@@ -611,6 +613,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = work.zhouqi.hackathon;
 				PRODUCT_NAME = "扫一下";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -619,7 +622,7 @@
 			baseConfigurationReference = 7C19797E3C7EAE7CA0048208 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Qi Zhou (RC8KCAQRM7)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -629,6 +632,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = work.zhouqi.hackathon;
 				PRODUCT_NAME = "扫一下";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
